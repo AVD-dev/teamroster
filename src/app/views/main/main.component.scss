@@ -1,0 +1,29 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas:
+    'main'
+    'menu';
+  grid-template-rows: auto 4.2rem;
+  overflow: hidden;
+}
+
+.main {
+  grid-area: main;
+  border: thin solid red;
+  margin-bottom: 1rem;
+}
+
+.menu {
+  border: thin solid green;
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  padding-right: 4rem;
+}
+
+::ng-deep .p-speeddial-action {
+  height: 4rem;
+  width: 4rem;
+}

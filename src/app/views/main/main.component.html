@@ -1,0 +1,20 @@
+<div class="container">
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+
+  <menu class="menu">
+    <p-speedDial
+      [model]="options"
+      [mask]="true"
+      type="semi-circle"
+      direction="up"
+      [radius]="90"
+      [rotateAnimation]="false"
+      showIcon="pi pi-th-large"
+      hideIcon="pi pi-times"
+    >
+      <ng-template pTemplate="button"><div></div> </ng-template>
+    </p-speedDial>
+  </menu>
+</div>
