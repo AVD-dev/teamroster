@@ -1,10 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-  font-family: 'Robot', sans-serif;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   letter-spacing: 0.08rem;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 }
+/*
+  Breakpoints:
+   < 576 px   || < 36rem
+   >= 576 px  || >= 36rem
+   >= 768px   || >= 48rem
+   > 992 px   || > 62rem
+   >= 1200px  || >= 75rem
+*/
