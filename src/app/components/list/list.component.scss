@@ -1,0 +1,160 @@
+.list-container {
+  height: 100%;
+}
+
+.header {
+  display: flex;
+
+  th {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.5rem;
+  }
+}
+
+.picture {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 15%;
+  max-width: 5.9rem;
+
+  .selfie {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.name {
+  width: 85%;
+  overflow: hidden;
+  display: flex;
+
+  span {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.age {
+  width: 15%;
+  // padding: 0;
+
+  span {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1.2rem;
+  }
+}
+
+.city {
+  align-items: flex-end;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.body-row {
+  // border: thin solid lightgray;
+  display: flex;
+  max-width: 100vw;
+  padding: 0.5rem 0;
+
+  .cell {
+    border: none;
+    padding: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .location {
+    font-size: 0.875rem;
+  }
+
+  .data {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    flex-direction: row;
+
+    .name {
+      padding-bottom: 0;
+    }
+
+    .city {
+      padding-left: 0;
+    }
+  }
+}
+
+.poc {
+  max-width: 83%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+::ng-deep {
+  .p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(even) {
+    background: #e9f5ff;
+  }
+}
+
+@media only screen and (min-width: 36rem) {
+  .picture {
+    max-width: 3.4rem;
+  }
+
+  .name {
+    display: flex;
+    overflow: hidden;
+    max-width: 12.5rem;
+  }
+
+  .age {
+    width: 5rem;
+
+    span {
+      position: initial;
+      font-size: initial;
+    }
+  }
+
+  .state {
+    width: 5.6rem;
+    justify-content: center;
+  }
+
+  .body-row {
+    padding: 0;
+
+    .data {
+      overflow: hidden;
+      width: 100%;
+
+      .name {
+        padding-bottom: 0.5rem;
+      }
+
+      .age {
+        justify-content: flex-end;
+      }
+
+      .city {
+        padding-left: 0.5rem;
+      }
+    }
+
+    .location {
+      font-size: initial;
+    }
+  }
+
+  .poc {
+    max-width: 100%;
+  }
+}

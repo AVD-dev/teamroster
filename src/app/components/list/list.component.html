@@ -1,0 +1,61 @@
+<div class="list-container">
+  <p-table
+    [value]="players"
+    [scrollable]="true"
+    styleClass="p-datatable-striped"
+    [scrollHeight]="'calc(100vh - 8.75rem)'"
+  >
+    <ng-template pTemplate="caption"> List of Players </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr class="header">
+        <th class="picture"></th>
+        <th pSortableColumn="name" class="name">
+          Name <p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pSortableColumn="age" class="age">
+          Age <p-sortIcon field="age"></p-sortIcon>
+        </th>
+        <th pSortableColumn="state" class="state">
+          State <p-sortIcon field="state"></p-sortIcon>
+        </th>
+        <th pSortableColumn="city" class="city">
+          City <p-sortIcon field="city"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-player>
+      <tr class="body-row">
+        <td class="cell picture">
+          <img
+            class="selfie"
+            [src]="'assets/img/Pc-Icons-Principle-9.gif'"
+            alt="Football player profile"
+          />
+        </td>
+
+        <div class="data">
+          <td class="cell name">
+            <span>{{ player.name }}</span>
+          </td>
+          <td class="cell age">
+            <!-- TODO: show age as year. Ex: '21-->
+            <span>{{ player.age }}</span>
+          </td>
+          <td class="cell state">
+            <span class="location">{{ player.state }},</span>
+          </td>
+          <td class="cell city">
+            <span class="location poc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              neque sunt, nulla eum odio enim dolorem eius magnam doloribus
+              nostrum, iure tenetur ipsam modi et numquam ut culpa dolore
+              cumque!
+            </span>
+          </td>
+        </div>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
