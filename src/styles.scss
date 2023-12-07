@@ -8,6 +8,18 @@
   font-size: 14px;
   font-weight: 400;
 }
+
+// Custom root styles
+
+h1 {
+  font-weight: bold;
+  color: #000f8a;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  color: #000f8a;
+}
+
 /*
   Breakpoints:
    < 576 px   || < 36rem
