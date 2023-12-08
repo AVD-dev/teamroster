@@ -10,14 +10,23 @@
 }
 
 // Custom root styles
+:root {
+  --text-primary: #000f8a;
+}
 
 h1 {
   font-weight: bold;
-  color: #000f8a;
+  color: var(--text-primary);
 }
 
 .p-datatable .p-datatable-thead > tr > th {
-  color: #000f8a;
+  color: var(--text-primary);
+}
+
+// PrimNG styles
+.p-disabled {
+  background-color: #e6e6e6;
+  cursor: not-allowed;
 }
 
 /*
