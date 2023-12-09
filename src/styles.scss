@@ -38,6 +38,10 @@ h1 {
   color: var(--text-primary);
   font-size: 1rem;
 }
+
+.p-datatable .p-sortable-column .p-sortable-column-icon {
+  color: var(--text-primary);
+}
 /*
   Breakpoints:
    < 576 px   || < 36rem
