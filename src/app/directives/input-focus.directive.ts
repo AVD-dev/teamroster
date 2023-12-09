@@ -30,8 +30,8 @@ export class InputFocusDirective {
 
   private _changeWeightToBold(bold = true) {
     const weight = bold ? 'bold' : '400';
-    const spanElement = this.nativeElement.querySelector('.camp');
+    const labelEelement = this.nativeElement.querySelector('label');
 
-    this._render.setStyle(spanElement, 'font-weight', weight);
+    this._render.setStyle(labelEelement, 'font-weight', weight);
   }
 }

@@ -7,7 +7,7 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private primeNgConfgi: PrimeNGConfig) {
-    this.primeNgConfgi.ripple = true;
+  constructor(private primeNgConfig: PrimeNGConfig) {
+    this.primeNgConfig.ripple = true;
   }
 }

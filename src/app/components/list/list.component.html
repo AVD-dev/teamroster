@@ -5,9 +5,9 @@
     styleClass="p-datatable-striped"
     [scrollHeight]="'calc(100vh - 8.75rem)'"
   >
-    <ng-template pTemplate="caption"> List of Players </ng-template>
+    <ng-template pTemplate="caption"> <h1>List of Players</h1> </ng-template>
 
-    <ng-template pTemplate="header">
+    <ng-template pTemplate="header" *ngIf="players.length > 0">
       <tr class="header">
         <th class="picture"></th>
         <th pSortableColumn="name" class="name">
@@ -56,6 +56,10 @@
           </td>
         </div>
       </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <app-searcher [eventRequired]="true"></app-searcher>
     </ng-template>
   </p-table>
 </div>
