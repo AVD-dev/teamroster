@@ -12,10 +12,10 @@
 .main {
   grid-area: main;
   margin-bottom: 1rem;
+  width: 100vw;
 }
 
 .menu {
-  border: thin solid green;
   grid-area: menu;
   display: flex;
   justify-content: center;

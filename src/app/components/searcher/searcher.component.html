@@ -1,0 +1,71 @@
+<div class="searcher">
+  <p-card class="w-full align-items-center flex">
+    <ng-template pTemplate="header">
+      <div class="header">
+        <i class="pi pi-search"></i>
+        <h1>Searcher</h1>
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="content">
+      <form
+        [formGroup]="searcherForm"
+        (ngSubmit)="onSubmit()"
+        class="searcher-form"
+      >
+        <div appInputFocus>
+          <span class="p-float-label">
+            <p-dropdown
+              inputId="dropdown"
+              formControlName="campus"
+              [options]="campus"
+              optionLabel="name"
+              optionValue="name"
+              [filter]="true"
+              styleClass="w-full"
+              class="w-full"
+              placeholder="Select a campus"
+            ></p-dropdown>
+            <label for="dropdown">Campus</label>
+          </span>
+        </div>
+        <div class="form-row" appInputFocus>
+          <span class="p-float-label">
+            <p-dropdown
+              inputId="state"
+              formControlName="state"
+              [options]="campus"
+              optionLabel="name"
+              optionValue="name"
+              [filter]="true"
+              styleClass="w-full"
+              placeholder="Select a state"
+            ></p-dropdown>
+            <label for="state">State</label>
+          </span>
+        </div>
+        <div class="form-row" appInputFocus>
+          <span class="p-float-label">
+            <p-dropdown
+              inputId="city"
+              formControlName="city"
+              [options]="campus"
+              optionLabel="name"
+              optionValue="name"
+              [filter]="true"
+              styleClass="w-full"
+              placeholder="Select a city"
+            ></p-dropdown>
+            <label for="city">City</label>
+          </span>
+        </div>
+        <button
+          pButton
+          type="submit"
+          label="Submit"
+          [disabled]="searcherForm.invalid"
+        ></button>
+      </form>
+    </ng-template>
+  </p-card>
+</div>

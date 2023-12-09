@@ -8,6 +8,36 @@
   font-size: 14px;
   font-weight: 400;
 }
+
+// Custom root styles
+:root {
+  --text-primary: #000f8a;
+}
+
+h1 {
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  color: var(--text-primary);
+}
+
+// PrimNG styles
+.p-disabled {
+  background-color: #e6e6e6;
+  cursor: not-allowed;
+}
+
+.p-float-label input:focus ~ label,
+.p-float-label input.p-filled ~ label,
+.p-float-label textarea:focus ~ label,
+.p-float-label textarea.p-filled ~ label,
+.p-float-label .p-inputwrapper-focus ~ label,
+.p-float-label .p-inputwrapper-filled ~ label {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
 /*
   Breakpoints:
    < 576 px   || < 36rem
