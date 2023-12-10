@@ -7,6 +7,7 @@
     'menu';
   grid-template-rows: auto 4.2rem;
   overflow: hidden;
+  position: relative;
 }
 
 .main {
@@ -19,30 +20,20 @@
   grid-area: menu;
   display: flex;
   justify-content: center;
-  position: relative;
+}
 
-  .grass {
-    width: 100%;
-    max-height: 4.2rem;
-    position: relative;
-    top: 0;
-    overflow: hidden;
-
-    &-bg {
-      position: absolute;
-      bottom: 0;
-      height: 10rem;
-      width: 100%;
-      opacity: 0.5;
-    }
-  }
+.grass {
+  width: 100%;
+  max-height: 15vh;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
 }
 
 p-speeddial {
   z-index: 999;
   margin-right: 4rem;
-  position: absolute;
-  top: 0;
 }
 
 ::ng-deep .p-speeddial-action {
