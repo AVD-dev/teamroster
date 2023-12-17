@@ -1,5 +1,8 @@
 <div class="container">
-  <main class="main">
+  <main
+    class="main"
+    [ngStyle]="{ 'z-index': (speedDialOpen$ | async) ? -1 : 'initial' }"
+  >
     <router-outlet></router-outlet>
   </main>
 
@@ -13,6 +16,7 @@
       [rotateAnimation]="false"
       showIcon="pi pi-th-large"
       hideIcon="pi pi-times"
+      (onVisibleChange)="onToggleSpeedDial($event)"
     ></p-speedDial>
   </menu>
 
